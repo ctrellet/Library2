@@ -3,14 +3,31 @@ package library.model;
 
 import java.util.Objects;
 
+import static library.model.Movie.HORROR;
+
 public class DVD extends CD {
     private Movie kind;
+
+    public boolean isThreeD() {
+        return threeD;
+    }
+
     private boolean threeD;
 
     public DVD(String title, int time, Movie kind, boolean threeD) {
-        super(title,time);
+        super(title, time);
         this.kind = kind;
         this.threeD = threeD;
+    }
+
+    public int getShippingDay() {
+        if (this.kind == HORROR) {
+            return 1;
+        }
+        if (this.threeD) {
+            return 3;
+        }
+        return 2;
     }
 
     @Override

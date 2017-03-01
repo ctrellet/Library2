@@ -5,15 +5,16 @@ import library.model.CD;
 import library.model.DVD;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 interface ILibrary {
 
-    ArrayList<Book> putBooks(ArrayList<Book> books);
+    List<Book> putBooks(List<Book> books);
 
-    ArrayList<DVD> putDvds(ArrayList<DVD> dvds);
+    List<DVD> putDvds(List<DVD> dvds);
 
-    ArrayList<CD> putCDs(ArrayList<CD> cds);
+    List<CD> putCDs(List<CD> cds);
 
     boolean isOpen(int hour);
 }

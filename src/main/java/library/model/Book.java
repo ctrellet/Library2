@@ -10,4 +10,8 @@ public class Book {
         this.title = title;
         this.pages = pages;
     }
+
+    public int getShippingDay(){
+        return 1;
+    }
 }

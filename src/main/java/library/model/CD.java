@@ -6,7 +6,6 @@ import java.util.Objects;
 public class CD {
 
     protected String title;
-
     protected int time;
 
     public CD(String title, int time) {
@@ -14,8 +13,17 @@ public class CD {
         this.time = time;
     }
 
+    public CD(String title, int time, int[] shippingDay) {
+        this.title = title;
+        this.time = time;
+    }
+
     public String getTitle() {
         return title;
+    }
+
+    public int getShippingDay() {
+        return 3;
     }
 
     @Override
